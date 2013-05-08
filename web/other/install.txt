@@ -1,0 +1,26 @@
+apt-get install python-pip python-sphinx
+pip install http://github.com/gawel/impress/tarball/master
+
+# nano /usr/local/lib/python2.7/dist-packages/impress/funcs.py
+#def absolute(slide, slides):
+#    """:doc:`absolute`"""
+#    pass
+
+
+apt-get install python-webpy 
+
+apt-get install libapache2-mod-wsgi
+
+
+nano /etc/apache2/sites-available/default
+
+
+service apache2 reload
+
+
+scp -r ./python-impress-webpy bms@192.168.0.101:~
+
+chown -R www-data.www-data /var/www/python-impress-webpy
+
+
+

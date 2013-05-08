@@ -1,0 +1,27 @@
+$def with (content)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>python-impress-webpy presentations</title>
+<!--Any .js files defined on the content page.-->
+$if content.jsfiles:
+    $for f in content.jsfiles.split():
+        <script type="text/javascript" src="/static/$f"></script>
+$if content.cssfiles:
+    $for c in content.cssfiles.split():
+        <link rel="stylesheet" href="/static/$c">
+    <style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+    <h1><a href="/">python-impress-webpy presentations</a></h1>
+$:content
+    </div>
+  </body>
+</html>
+

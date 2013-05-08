@@ -1,0 +1,17 @@
+$def with (form)
+$var jsfiles:
+$var cssfiles:
+
+<h3>Create a new Impress.js presentation in reStructuredText Markup</h3>
+<form name="main" method="post">
+  $if not form.valid: <p class="error">Try again</p>
+  <div id='sites'></div>
+  $:form.render()
+</form>
+<p>Once the password is set it is needed to edit the presentations. It stored in plaintext on the server and offers only trival security.</p>
+</div>
+
+
+
+
+

@@ -1,0 +1,15 @@
+$def with (records)
+$var jsfiles:
+$var cssfiles:
+
+<h3>Make a impress.js presentation</h3>
+<p>Via python-impress, use this online tool to create a presentation</p>
+<p>Either starting editing a <a href="/new/">new presentation</a> in reStructuredText,</p>
+<p>or view one of the presentation below.</p>
+
+<h3>List of python-impress presentations</h3>
+<ul>
+$for r in records:
+    <li>$r[1]: <a href='summary/$r[0]'>summary</a> <a href='/static/impress/$r[0]/html/' target="_blank">View</a> <a href='edit/$r[0]'>Edit</a> <a href='/static/impress/$r[0]/$(r[1]).zip'>Download</a></li>
+</ul>
+<p></p>

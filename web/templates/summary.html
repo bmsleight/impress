@@ -1,0 +1,13 @@
+$def with (records)
+$var jsfiles:
+$var cssfiles:
+
+<h3>Summary of Presentation: $records[0][1] </h3>
+
+<ul>
+    <li>$records[0][1]: <a href='/static/impress/$records[0][0]/html/' target="_blank">View</a> <a href='../edit/$records[0][0]'>Edit</a> <a href='/static/impress/$records[0][0]/$(records[0][1]).zip'>Download</a></li>
+</ul>
+<pre>
+$records[0][3]
+</pre>
+<p></p>

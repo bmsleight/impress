@@ -1,0 +1,21 @@
+$def with (form)
+$var jsfiles: codemirror.js rst.js
+$var cssfiles: codemirror.css docs.css
+
+
+<h3>Edit</h3>
+<form name="main" method="post">
+  $if not form.valid: <p class="error">Try again</p>
+  <div id='sites'></div>
+  $:form.render()
+</form>
+
+<script>
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+  lineNumbers: true,
+  viewportMargin: 0,
+  });
+</script>
+
+<p>Ths password set and is needed to edit the presentations. It stored in plaintext on the server and offers only trival security.</p>
+
