@@ -68,6 +68,11 @@ def linear(slide, slides):
         slide.x += 1000
 
 
+def absolute(slide, slides):
+    """:doc:`absolute`"""
+    pass
+
+
 def square(slide, slides, amount=4):
     """:doc:`square`"""
     if not slide.index % amount and slide.index:
